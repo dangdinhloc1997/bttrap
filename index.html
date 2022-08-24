@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <header class="container text-center">
+    </header>
+    <div class="main container">
+        <div class="main-item" id="ex1">
+            <h1 class="text-center mb-5">Bootstrap</h1>
+            <div class="row">
+                <div class="col-4">
+                    <h2>Cài đặt</h2>
+                    <p>Tới trang chủ bootstrap</p>
+                    <p>Tại mục Getting started chọn Introduction</p>
+                    <p>Đi tới Include Bootstrap’s CSS and JS</p>
+                    <p>Copy thẻ link và dán vào file html muốn sử dụng</p>
+                    <p>Copy thẻ script và dán vào file html muốn sử dụng</p>
+                </div>
+                <div class="col-8">
+                    <img src="./img/setup.jpg" class="w-100" alt="">
+                </div>
+            </div>
+            <a class="btn-next" href="#ex2">Next</a>
+        </div>
+        <div class="main-item" id="ex2">
+            <div class="row">
+                <h2>Cấu trúc layout</h2>
+                <div class="col-4">
+                    <h6>container-fuild / container</h6>
+                    <p>Phần bao bọc row và col</p>
+                    <h6>container-fuild?</h6>
+                    <p>Có width = 100%</p>
+                    <h6>container</h6>
+                    <p>Có width tự động theo từng kích thước. ở những màn hình to và vừa sẽ thụt vào trong so với container-fuild</p>
+                    <!-- <p>Đại diện cho 1 hàng</p> -->
+                    <h6>row</h6>
+                    <p>Đại diện cho 1 hàng</p>
+                    <h6>col</h6>
+                    <p>Đại diện cho cột</p>
+                </div>
+                <div class="col-8">
+                    <img src="./img/cautruc.jpg" alt="" class="w-100">
+                </div>
+            </div>
+            <a class="btn-prev" href="#ex1">Prev</a>
+            <a class="btn-next" href="#ex3">Next</a>
+        </div>
+        <div class="main-item" id="ex3">
+            <div class="row">
+                <h2>Cấu trúc layout - tiếp</h2>
+                <div class="col-12">
+                    <img src="./img/cautruc2.jpg" class="w-100" alt=""> 
+                </div>
+            </div>
+            <a class="btn-prev" href="#ex2">Prev</a>
+            <a class="btn-next" href="#ex3-1">Next</a>
+        </div>
+        <div class="main-item" id="ex3-1">
+            <div class="row">
+                <div class="col-4">
+                    <h6>12 - col?</h6>
+                    <p>Một row trong bootstrap tự động được chia làm 12 cột</p>
+                    <h6>Can thiệp vào quy mô col?</h6>
+                    <p>Ta có thể quyết định việc một col chiếm bao nhiêu phần trong 1 row bằng cách đặt đơn vị phía sau col</p>
+                    <h6>col-n ?</h6>
+                    <p>n là đơn vị. từ 1 tới 12 (vì tổng các cột là 12)</p>
+                    <p>n đại diện cho việc col đó có quy mô bằng bao nhiêu col-1 cộng lại</p>
+                    <p>Nếu 1 class có tên col-5 ta có thể hiểu col-5 có quy mô bằng 5 lần col-1</p>
+                    <h6>Sắp xếp col?</h6>
+                    <p>Các col là cột trong row. nên nó sẽ tự sắp xếp. nếu như số col cộng lại vượt quá 12 (12-col trên 1 row) thì nó sẽ tự động xuống dòng</p>
+                </div>
+                <div class="col-8">
+                    <img src="./img/12-col.png" class="w-100" alt=""> 
+                </div>
+            </div>
+            <a class="btn-prev" href="#ex3">Prev</a>
+            <a class="btn-next" href="#ex4">Next</a>
+        </div>
+        <div class="main-item" id="ex4">
+            <div class="row">
+                <h2>Cú pháp đặt tên class trong bootstrap</h2>
+                <div class="col-6">
+                    <h6>Cú pháp</h6>
+                    <h6>Thuộc tính-breakpoint-giá trị</h6>
+                    <p>breakpoint có thể có hoặc không</p>
+                    <p>Trong trường hợp k có breakpoint cụ thể sẽ áp dụng lên mọi breakpoint</p>
+                    <h6>Thuộc tính ? Giá trị ?</h6>
+                    <p>Chính là các cặp thuộc tính và giá trị trong CSS</p>
+                    <p>Ngoài ra còn có riêng của bootstrap</p>
+                    <h6>Breakpoint ?</h6>
+                    <p>Là các điểm kích thước màn hình mà tại đó chúng ta sẽ thay đổi tỉ lệ layout</p>
+                    <h6>Ví dụ về đặt class</h6>
+                    <p>col-xl-6 (cột tại breakpoint xl có giá trị = 6)</p>
+                    <p>text-xl-center (chữ tại breakpoint xl có giá trị center - căn giữa)</p>
+                    <p>col-5 (col tại mọi breakpoint có giá trị = 5)</p>
+                </div>
+                <div class="col-6">
+                    <img src="./img/cuphap.png" alt="" class="w-100 mb-5">
+                    <img src="./img/breakpoint.jpg" class="w-100" alt="">
+                </div>
+            </div>
+            <a class="btn-prev" href="#ex3-1">Prev</a>
+            <a class="btn-next" href="#ex5">Next</a>
+        </div>
+        <div class="main-item" id="ex5">
+            <div class="row">
+                <h2>Cú pháp đặt tên class trong bootstrap - tiếp</h2>
+                <div class="col-6">
+                    <h6>Khác nhau giữa css và bootstrap</h6>
+                    <h6>left-start / right-end</h6>
+                    <p>left trong css được chuyển thành start</p>
+                    <p>right trong css được chuyển thành end</p>
+                    <h6>Tên class trong bootstrap thường là các thuộc tính của css. Viết thường hoặc viết tắt</h6>
+                    <p>Ví dụ</p>
+                    <p>display: flex   -> d-flex</p>
+                    <p>text-align: center -> text-center</p>
+                    <p>text-color: black -> text-black</p>
+                    <p>p-5 (padding có giá trị là 5)</p>
+                    <p>ps-5 (padding start -> padding-left có giá trị là 5)</p>
+                    <p>pt-5 (padding-top có giá trị là 5)</p>
+                    <h6>Hãy nghĩ tới những gì bạn muốn viết tại Css và thử với chữ cái đầu của nó. bạn sẽ thấy các gợi ý từ bootstrap ^^</h6>
+                </div>
+                <div class="col-6">
+                    <h6>Hãy cài một số tiện ích để giúp việc gợi ý tên class tại visual studio code. có rất nhiều tiện ích. lựa chọn phù hợp với bạn và với phiên bản bootstrap</h6>
+                    <img src="./img/end.jpg" class="w-100" alt="">
+                </div>
+            </div>
+            <a class="btn-prev" href="#ex3-1">Prev</a>
+            <a class="btn-next" href="#ex6">Next</a>
+        </div>
+        <div class="main-item" id="ex6">
+            <div class="row">
+                <h2>Đơn vị</h2>
+                <div class="col-6">
+                    <h6>Bạn sẽ thấy các giá trị đại diện cho đơn vị từ 1-12 dành cho các col</h6>
+                    <h6>Và từ 0-5 với các thuộc tính khác</h6>
+                    <p>ví dụ</p>
+                    <p>pb-5 (padding-bottom 5)</p>
+                    <h6>Vậy 5 được tính theo đơn vị nào?</h6>
+                    <p>Nó được tính theo rem</p>
+                </div>
+                <div class="col-6">
+                    <img src="./img/rem.jpg" alt="" class="w-100">
+                </div>
+            </div>
+            <!-- <a class="btn-prev" href="#ex5">Prev</a> -->
+            <!-- <a class="btn-next" href="#ex5">Next</a> -->
+        </div>
+<!-- ------------- -->
+        <!-- <div class="main-item" id="ex8">
+            <div class="row">
+                <h2></h2>
+                <div class="col-6">
+                    <h6></h6>
+                    <p></p>
+                    
+                <div class="col-6">
+                    
+                </div>
+            </div>
+            <a class="btn-prev" href="#ex7">Prev</a>
+            <a class="btn-next" href="#ex9">Next</a>
+        </div> -->
+
+
+
+    <button id="theme" islight="false">Sáng</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var btnTheme = $('#theme');
+        
+        btnTheme.click((e) => {
+            var isLight;
+                if (btnTheme.attr('islight') == 'true') {
+                    isLight = true;
+                } else {
+                    isLight = false;
+                }
+            btnTheme.attr('islight', !isLight)
+            if (btnTheme.attr('islight') == 'true') {
+                    $('body').css('backgroundColor','white');
+                    btnTheme.text('Tối');
+                    $('p').css('color','black');
+                    $('h1,h2,h3,h4,h5,h6').css('color','red')
+                } else {
+                    $('body').css('backgroundColor','black');
+                    btnTheme.text('Sáng');
+                    $('p').css('color','#ffffff');
+                    $('h1,h2,h3,h4,h5,h6').css('color','rgb(155, 244, 22)')
+
+                }
+            isLight = !isLight
+        })
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
